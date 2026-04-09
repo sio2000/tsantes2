@@ -12,8 +12,8 @@ export default function CTASection() {
     <section className="relative py-32 md:py-48 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1920&h=900&dpr=1"
-          alt="CTA background"
+          src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=1920&q=80"
+          alt="Δερμάτινη υφή και τεχνική λεπτομέρεια"
           className="w-full h-full object-cover"
           loading="lazy"
         />
@@ -31,7 +31,7 @@ export default function CTASection() {
 
       <div className="relative z-10 px-6 md:px-12 lg:px-20 max-w-5xl mx-auto text-center">
         <div className="reveal mb-6">
-          <span className="section-tag">Limited — Exclusive — Unique</span>
+          <span className="section-tag">Περιορισμένα — Χειροποίητα — Ξεχωριστά</span>
         </div>
 
         <h2
@@ -44,15 +44,9 @@ export default function CTASection() {
             color: 'var(--color-text)',
           }}
         >
-          Ξεχώρισε.
+          Ξεχώρισε με κάτι
           <br />
-          <em style={{ fontStyle: 'italic' }} className="gold-gradient">
-            Φόρα κάτι
-          </em>
-          <br />
-          που δεν έχει
-          <br />
-          κανείς άλλος.
+          <em style={{ fontStyle: 'italic' }} className="gold-gradient">που δεν υπάρχει αλλού.</em>
         </h2>
 
         <div
@@ -70,13 +64,13 @@ export default function CTASection() {
             lineHeight: 1.75,
           }}
         >
-          Η αποκλειστικότητα δεν είναι πολυτέλεια. Είναι επιλογή.
-          Κάνε αυτή την επιλογή σήμερα.
+          Επένδυσε σε μια χειροποίητη τσάντα που εκφράζει το προσωπικό σου ύφος.
+          Design, υλικά και κατασκευή σε απόλυτη ισορροπία.
         </p>
 
         <div className="reveal delay-400 flex flex-col sm:flex-row gap-4 justify-center">
           <button onClick={scrollToContact} className="btn-primary text-base">
-            <span>Ξεκίνα τώρα</span>
+            <span>Επικοινώνησε μαζί μας</span>
             <ArrowRight size={16} />
           </button>
           <button

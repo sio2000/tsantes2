@@ -22,9 +22,9 @@ export default function App() {
         <BrandStory />
         <Marquee />
         <Services />
+        <Testimonials />
         <Portfolio />
         <Process />
-        <Testimonials />
         <InstagramSection />
         <CTASection />
         <Contact />

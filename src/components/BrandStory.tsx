@@ -8,7 +8,7 @@ export default function BrandStory() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         <div className="order-2 lg:order-1">
           <div className="reveal mb-4">
-            <span className="section-tag">Η ιστορία μας</span>
+            <span className="section-tag">Η ταυτότητά μας</span>
           </div>
 
           <h2
@@ -21,11 +21,11 @@ export default function BrandStory() {
               color: 'var(--color-text)',
             }}
           >
-            Η τέχνη της
+            Από το εργαστήριο
             <br />
-            <em className="gold-gradient" style={{ fontStyle: 'italic' }}>χειροποίητης</em>
+            των Τρικάλων
             <br />
-            δημιουργίας
+            <em className="gold-gradient" style={{ fontStyle: 'italic' }}>σε κάθε διαδρομή σου</em>
           </h2>
 
           <div className="gold-line-left reveal delay-200 mb-8 w-16" />
@@ -41,8 +41,8 @@ export default function BrandStory() {
               maxWidth: '480px',
             }}
           >
-            Πίσω από κάθε κομμάτι κρύβεται ένα πάθος για την τελειότητα. Δεν φτιάχνουμε
-            αντικείμενα μαζικής παραγωγής — φτιάχνουμε κομμάτια που φέρουν την προσωπικότητά σου.
+            Στην καρδιά των Τρικάλων, κάθε τσάντα ξεκινά ως ιδέα πάνω στο χαρτί
+            και ολοκληρώνεται στο χέρι με ακρίβεια, ρυθμό και σεβασμό στο υλικό.
           </p>
 
           <p
@@ -56,8 +56,8 @@ export default function BrandStory() {
               maxWidth: '480px',
             }}
           >
-            Κάθε sneaker ζωγραφίζεται στο χέρι. Κάθε τσάντα κατασκευάζεται με premium
-            υλικά και αφοσίωση. Η αποκλειστικότητα δεν είναι απλώς λέξη — είναι υπόσχεση.
+            Πιστεύουμε στη μοναδικότητα: περιορισμένα κομμάτια, premium δέρμα,
+            καθαρές γραμμές και λεπτομέρειες που αντέχουν στον χρόνο.
           </p>
 
           <div className="reveal delay-500 flex flex-col sm:flex-row gap-10">
@@ -97,7 +97,7 @@ export default function BrandStory() {
                 }}
                 className="gold-gradient"
               >
-                ∞
+                5
               </div>
               <div
                 style={{
@@ -109,7 +109,7 @@ export default function BrandStory() {
                   marginTop: '6px',
                 }}
               >
-                Δυνατότητες
+                Στάδια ελέγχου
               </div>
             </div>
             <div style={{ width: '1px', background: 'var(--color-border)' }} className="hidden sm:block" />
@@ -148,8 +148,8 @@ export default function BrandStory() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&dpr=1"
-                alt="Χειροποίητη δημιουργία"
+                src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=900&q=80"
+                alt="Χειροποίητη κατασκευή τσάντας"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -176,7 +176,7 @@ export default function BrandStory() {
                   lineHeight: 1.5,
                 }}
               >
-                "Κάθε ράμμα, κάθε πινελιά — με πρόθεση."
+                "Κάθε ράμμα έχει λόγο ύπαρξης."
               </div>
             </div>
             <div

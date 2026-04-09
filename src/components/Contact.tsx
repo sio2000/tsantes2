@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useReveal } from '../hooks/useInView';
-import { submitContact } from '../lib/supabase';
-import { MapPin, Instagram, Facebook, MessageCircle, ArrowRight, CheckCircle } from 'lucide-react';
+import { hasSupabaseConfig, submitContact } from '../lib/supabase';
+import { MapPin, Instagram, Facebook, ArrowRight, CheckCircle } from 'lucide-react';
 
 const serviceOptions = [
-  { value: 'sneakers', label: 'Custom Sneakers' },
-  { value: 'bags', label: 'Handmade Luxury Bags' },
-  { value: 'full_custom', label: 'Πλήρες Custom' },
-  { value: 'general', label: 'Γενική ερώτηση' },
+  { value: 'shoulder', label: 'Τσάντες ώμου' },
+  { value: 'crossbody', label: 'Crossbody' },
+  { value: 'backpack', label: 'Σακίδια πλάτης' },
+  { value: 'custom_order', label: 'Custom παραγγελία' },
 ];
 
 export default function Contact() {
@@ -17,7 +17,7 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
-    service_type: 'sneakers',
+    service_type: 'shoulder',
     message: '',
   });
   const [loading, setLoading] = useState(false);
@@ -34,12 +34,16 @@ export default function Contact() {
       setError('Παρακαλώ συμπλήρωσε όλα τα υποχρεωτικά πεδία.');
       return;
     }
+    if (!hasSupabaseConfig) {
+      setError('Η φόρμα είναι προσωρινά μη διαθέσιμη. Ρύθμισε πρώτα τα στοιχεία σύνδεσης.');
+      return;
+    }
     setLoading(true);
     setError('');
     try {
       await submitContact(form);
       setSuccess(true);
-      setForm({ name: '', email: '', phone: '', service_type: 'sneakers', message: '' });
+      setForm({ name: '', email: '', phone: '', service_type: 'shoulder', message: '' });
     } catch {
       setError('Κάτι πήγε στραβά. Δοκίμασε ξανά.');
     } finally {
@@ -91,7 +95,7 @@ export default function Contact() {
             >
               Ας φτιάξουμε
               <br />
-              <em style={{ fontStyle: 'italic' }} className="gold-gradient">κάτι μοναδικό</em>
+              <em style={{ fontStyle: 'italic' }} className="gold-gradient">την επόμενη τσάντα σου</em>
               <br />
               μαζί
             </h2>
@@ -107,8 +111,8 @@ export default function Contact() {
                 maxWidth: '380px',
               }}
             >
-              Πες μας την ιδέα σου και θα σε βοηθήσουμε να τη μετατρέψεις σε πραγματικότητα.
-              Κάθε αίτημα αντιμετωπίζεται με αφοσίωση.
+              Συμπλήρωσε τη φόρμα με τις λεπτομέρειες που σε εκφράζουν και
+              θα επιστρέψουμε με πρόταση σχεδιασμένη αποκλειστικά για εσένα.
             </p>
 
             <div className="reveal delay-400 flex flex-col gap-5">
@@ -187,7 +191,7 @@ export default function Contact() {
 
               <div className="flex items-center gap-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/drshoe.trikala/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 group"
@@ -214,41 +218,7 @@ export default function Contact() {
                     }}
                     className="group-hover:text-[var(--color-gold)] transition-colors duration-300"
                   >
-                    HANDSTUFF / DRSHOE
-                  </span>
-                </a>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://wa.me/306900000000"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 group"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <div
-                    style={{
-                      width: '40px',
-                      height: '40px',
-                      border: '1px solid rgba(201,168,76,0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                    className="group-hover:border-[var(--color-gold)] transition-colors duration-300"
-                  >
-                    <MessageCircle size={16} style={{ color: 'var(--color-gold)' }} />
-                  </div>
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-sans)',
-                      fontSize: '14px',
-                      color: 'rgba(240,236,228,0.6)',
-                    }}
-                    className="group-hover:text-[var(--color-gold)] transition-colors duration-300"
-                  >
-                    WhatsApp
+                    Handstuff
                   </span>
                 </a>
               </div>

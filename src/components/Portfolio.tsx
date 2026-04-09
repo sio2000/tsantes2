@@ -2,71 +2,71 @@ import { useState } from 'react';
 import { useReveal } from '../hooks/useInView';
 import { X, ZoomIn } from 'lucide-react';
 
-const categories = ['Όλα', 'Sneakers', 'Bags', 'Custom'];
+const categories = ['Όλα', 'Τσάντες ώμου', 'Crossbody', 'Σακίδια πλάτης'];
 
 const items = [
   {
     id: 1,
-    category: 'Sneakers',
-    image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&dpr=1',
-    title: 'Urban Art Series',
-    desc: 'Hand-painted custom sneaker',
+    category: 'Τσάντες ώμου',
+    image: 'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=900&q=80',
+    title: 'Noir Shoulder 01',
+    desc: 'Δομημένη τσάντα ώμου',
     tall: true,
   },
   {
     id: 2,
-    category: 'Bags',
-    image: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1',
-    title: 'Noir Collection',
-    desc: 'Luxury handmade bag',
+    category: 'Crossbody',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80',
+    title: 'Crossbody Atelier',
+    desc: 'Καθημερινή κομψότητα',
     tall: false,
   },
   {
     id: 3,
-    category: 'Custom',
-    image: 'https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1',
-    title: 'Signature Edition',
-    desc: 'One-of-a-kind creation',
+    category: 'Τσάντες ώμου',
+    image: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=900&q=80',
+    title: 'Limited Grain',
+    desc: 'Premium texture detail',
     tall: false,
   },
   {
     id: 4,
-    category: 'Bags',
-    image: 'https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&dpr=1',
-    title: 'Leather Craft',
-    desc: 'Premium leather tote',
+    category: 'Σακίδια πλάτης',
+    image: 'https://images.unsplash.com/photo-1606522754091-a3bbf9ad4cb3?auto=format&fit=crop&w=900&q=80',
+    title: 'Backpack Heritage',
+    desc: 'Ανθεκτική κατασκευή',
     tall: true,
   },
   {
     id: 5,
-    category: 'Sneakers',
-    image: 'https://images.pexels.com/photos/1099816/pexels-photo-1099816.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1',
-    title: 'Monochrome Pro',
-    desc: 'Custom painted sneaker',
+    category: 'Crossbody',
+    image: 'https://images.unsplash.com/photo-1612902456551-333ac5afa26d?auto=format&fit=crop&w=900&q=80',
+    title: 'Soft Edge Cross',
+    desc: 'Minimal urban line',
     tall: false,
   },
   {
     id: 6,
-    category: 'Custom',
-    image: 'https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&dpr=1',
-    title: 'Artisan Process',
-    desc: 'Behind the craft',
+    category: 'Τσάντες ώμου',
+    image: 'https://images.unsplash.com/photo-1622560480654-d96214fdc887?auto=format&fit=crop&w=900&q=80',
+    title: 'Atelier Detail',
+    desc: 'Ραφή και φινίρισμα',
     tall: false,
   },
   {
     id: 7,
-    category: 'Sneakers',
-    image: 'https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1',
-    title: 'Golden Hour',
-    desc: 'Custom editorial shoot',
+    category: 'Σακίδια πλάτης',
+    image: 'https://images.unsplash.com/photo-1591561954555-607968c989ab?auto=format&fit=crop&w=900&q=80',
+    title: 'City Backpack',
+    desc: 'Ισορροπία άνεσης και κύρους',
     tall: false,
   },
   {
     id: 8,
-    category: 'Bags',
-    image: 'https://images.pexels.com/photos/2766930/pexels-photo-2766930.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&dpr=1',
-    title: 'Minimal Luxe',
-    desc: 'Handcrafted shoulder bag',
+    category: 'Crossbody',
+    image: 'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?auto=format&fit=crop&w=900&q=80',
+    title: 'Midnight Cross',
+    desc: 'Limited edition',
     tall: true,
   },
 ];
@@ -95,9 +95,9 @@ export default function Portfolio() {
               color: 'var(--color-text)',
             }}
           >
-            Κάθε κομμάτι,
+            Γκαλερί
             <br />
-            <em style={{ fontStyle: 'italic' }} className="gold-gradient">μια ιστορία</em>
+            <em style={{ fontStyle: 'italic' }} className="gold-gradient">χειροποίητης ταυτότητας</em>
           </h2>
         </div>
 

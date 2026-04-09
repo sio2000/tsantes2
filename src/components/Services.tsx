@@ -4,30 +4,30 @@ import { ArrowRight } from 'lucide-react';
 const services = [
   {
     number: '01',
-    title: 'Custom Sneakers',
-    subtitle: 'Χειροζωγραφισμένα',
+    title: 'Τσάντες ώμου',
+    subtitle: 'Συλλογή ώμου',
     description:
-      'Κάθε ζευγάρι είναι μοναδικό. Σχεδιάζουμε και ζωγραφίζουμε στο χέρι κάθε λεπτομέρεια, δημιουργώντας ένα wearable έργο τέχνης που ανήκει μόνο σε σένα.',
-    image: 'https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&dpr=1',
-    tags: ['Hand-painted', 'One-of-a-kind', 'Premium paint'],
+      'Δομημένες σιλουέτες με ήρεμη πολυτέλεια, ιδανικές για καθημερινή χρήση με premium αισθητική.',
+    image: 'https://images.unsplash.com/photo-1614179689702-355944cd0918?auto=format&fit=crop&w=800&q=80',
+    tags: ['Δέρμα υψηλής ποιότητας', 'Χειροποίητη ραφή', 'Περιορισμένα κομμάτια'],
   },
   {
     number: '02',
-    title: 'Luxury Bags',
-    subtitle: 'Χειροποίητες τσάντες',
+    title: 'Crossbody',
+    subtitle: 'Αστική συλλογή',
     description:
-      'Premium υλικά, χειρωνακτική κατασκευή. Κάθε τσάντα κατασκευάζεται με τη μέγιστη προσοχή στη λεπτομέρεια, για αυτούς που εκτιμούν το αληθινό craftsmanship.',
-    image: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&dpr=1',
-    tags: ['Premium leather', 'Handcrafted', 'Luxury finish'],
+      'Λιτές γραμμές, καθαρά τελειώματα και ισορροπία ανάμεσα σε λειτουργικότητα και κομψότητα.',
+    image: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=800&q=80',
+    tags: ['Ελαφριά αίσθηση', 'Ποιοτικά μεταλλικά στοιχεία', 'Artisan φινίρισμα'],
   },
   {
     number: '03',
-    title: 'Personalized',
-    subtitle: 'Πλήρες custom',
+    title: 'Σακίδια πλάτης',
+    subtitle: 'Atelier πλάτης',
     description:
-      'Η ιδέα σου γίνεται πραγματικότητα. Από το πρώτο σκίτσο ως το τελικό κομμάτι, δημιουργούμε ακριβώς αυτό που φαντάζεσαι — με τελειότητα.',
-    image: 'https://images.pexels.com/photos/2766930/pexels-photo-2766930.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&dpr=1',
-    tags: ['Full custom', 'Your vision', 'Exclusive'],
+      'Δερμάτινα σακίδια με έμφαση στην αντοχή και τη διαχρονική αισθητική, για κίνηση χωρίς συμβιβασμούς.',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80',
+    tags: ['Ενισχυμένη κατασκευή', 'Ανθεκτικότητα', 'Κομψή λειτουργικότητα'],
   },
 ];
 
@@ -39,14 +39,14 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 md:py-36" style={{ background: 'var(--color-surface)' }}>
+    <section id="collections" className="py-24 md:py-36" style={{ background: 'var(--color-surface)' }}>
       <div className="gold-line" />
       <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
         <div className="pt-16 md:pt-24">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div>
               <div className="reveal mb-4">
-                <span className="section-tag">Υπηρεσίες</span>
+                <span className="section-tag">Συλλογές</span>
               </div>
               <h2
                 className="reveal delay-100"
@@ -58,9 +58,9 @@ export default function Services() {
                   color: 'var(--color-text)',
                 }}
               >
-                Τι δημιουργούμε
+                Οι συλλογές μας
                 <br />
-                <em style={{ fontStyle: 'italic' }} className="gold-gradient">για σένα</em>
+                <em style={{ fontStyle: 'italic' }} className="gold-gradient">μόνο σε τσάντες</em>
               </h2>
             </div>
             <p
@@ -72,8 +72,8 @@ export default function Services() {
                 lineHeight: 1.8,
               }}
             >
-              Κάθε κομμάτι είναι ένα one-of-a-kind δημιούργημα. Δεν υπάρχουν αντίγραφα.
-              Δεν υπάρχουν σειρές. Μόνο το δικό σου.
+              Σχεδιάζουμε αποκλειστικά χειροποίητες τσάντες.
+              Καμία μαζική παραγωγή, μόνο συλλογές με περιορισμένα κομμάτια.
             </p>
           </div>
 
@@ -186,7 +186,7 @@ export default function Services() {
                       border: 'none',
                     }}
                   >
-                    <span>Ζήτα τώρα</span>
+                    <span>Ενδιαφέρομαι</span>
                     <ArrowRight
                       size={13}
                       className="transform group-hover/btn:translate-x-1 transition-transform duration-300"

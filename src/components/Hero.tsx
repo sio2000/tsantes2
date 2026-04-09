@@ -23,15 +23,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: '100svh', minHeight: '680px' }}>
+    <section id="home" className="relative w-full overflow-hidden" style={{ height: '100svh', minHeight: '680px' }}>
       <div
         ref={bgRef}
         className="absolute inset-0 scale-110 origin-center"
         style={{ willChange: 'transform' }}
       >
         <img
-          src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1"
-          alt="Custom sneakers"
+          src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1920&q=80"
+          alt="Χειροποίητη δερμάτινη τσάντα"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -51,7 +51,7 @@ export default function Hero() {
 
       <div className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
         <div className="mb-6" style={{ animation: 'fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both' }}>
-          <span className="section-tag">Τρίκαλα, Ελλάδα — Custom Studio</span>
+          <span className="section-tag">Τρίκαλα, Ελλάδα — Ατελιέ χειροποίητης τσάντας</span>
         </div>
 
         <h1
@@ -66,13 +66,9 @@ export default function Hero() {
             animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.35s both',
           }}
         >
-          Δεν δημιουργούμε
+          Δεν είναι απλά μια τσάντα.
           <br />
-          <em style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>προϊόντα.</em>
-          <br />
-          Δημιουργούμε μοναδικά
-          <br />
-          κομμάτια.
+          <em style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>Είναι χαρακτήρας.</em>
         </h1>
 
         <p
@@ -87,8 +83,8 @@ export default function Hero() {
             animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both',
           }}
         >
-          Custom sneakers χειροζωγραφισμένα. Χειροποίητες τσάντες πολυτελείας.
-          Κάθε κομμάτι αφηγείται τη δική σου ιστορία.
+          Χειροποίητες δερμάτινες τσάντες, σχεδιασμένες να ξεχωρίζουν.
+          Κάθε κομμάτι ολοκληρώνεται στο χέρι, σε περιορισμένο αριθμό.
         </p>
 
         <div
@@ -100,7 +96,7 @@ export default function Hero() {
             <ArrowRight size={14} />
           </button>
           <button onClick={scrollToContact} className="btn-secondary">
-            <span>Ζήτα το δικό σου custom</span>
+            <span>Δημιούργησε τη δική σου</span>
           </button>
         </div>
       </div>

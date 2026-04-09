@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Συλλογή', href: '#portfolio' },
-  { label: 'Υπηρεσίες', href: '#services' },
-  { label: 'Διαδικασία', href: '#process' },
+  { label: 'Αρχική', href: '#home' },
+  { label: 'Συλλογή', href: '#collections' },
+  { label: 'Υλικά', href: '#materials' },
+  { label: 'Γκαλερί', href: '#portfolio' },
   { label: 'Επικοινωνία', href: '#contact' },
 ];
 
@@ -56,7 +57,7 @@ export default function Navigation() {
                   className="text-[9px] tracking-[0.4em] uppercase"
                   style={{ fontFamily: 'var(--font-sans)', color: 'var(--color-gold)', letterSpacing: '0.4em' }}
                 >
-                  / DRSHOE
+                  / HANDMADE BAGS
                 </span>
               </div>
             </a>
@@ -98,7 +99,7 @@ export default function Navigation() {
                 className="btn-primary"
                 style={{ padding: '10px 24px', fontSize: '10px' }}
               >
-                <span>Ζήτα Custom</span>
+                <span>Εξατομίκευση</span>
               </button>
             </div>
 
@@ -124,7 +125,7 @@ export default function Navigation() {
                 HANDSTUFF
               </span>
               <span style={{ fontFamily: 'var(--font-sans)', fontSize: '9px', letterSpacing: '0.4em', textTransform: 'uppercase', color: 'var(--color-gold)' }}>
-                / DRSHOE
+                / HANDMADE BAGS
               </span>
             </div>
             <button
@@ -163,7 +164,7 @@ export default function Navigation() {
               onClick={() => handleLink('#contact')}
               className="btn-primary w-full justify-center"
             >
-              <span>Ζήτα το δικό σου Custom</span>
+              <span>Δημιούργησε τη δική σου</span>
             </button>
           </div>
         </div>

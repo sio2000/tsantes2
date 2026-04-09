@@ -1,76 +1,33 @@
-import { useState, useEffect } from 'react';
 import { useReveal } from '../hooks/useInView';
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { ShieldCheck, Scissors, Gem } from 'lucide-react';
 
-const testimonials = [
+const materialCards = [
   {
-    name: 'Μαρία Π.',
-    location: 'Αθήνα',
-    text: 'Έφτιαξα custom sneakers για τα γενέθλιά μου και ήταν ακριβώς αυτό που φανταζόμουν. Η προσοχή στη λεπτομέρεια είναι εκπληκτική. Σε έχω ξαναπαράγγειλα ήδη!',
-    rating: 5,
-    item: 'Custom Sneakers',
+    icon: Gem,
+    title: 'Γνήσιο δέρμα',
+    text: 'Επιλέγουμε φυσικό δέρμα με πλούσια υφή και χαρακτήρα που ωριμάζει όμορφα στον χρόνο.',
   },
   {
-    name: 'Νίκος Δ.',
-    location: 'Θεσσαλονίκη',
-    text: 'Ζήτησα μια handmade τσάντα για δώρο στη σύντροφό μου. Όταν την είδε, δεν μπορούσε να πιστέψει ότι ήταν χειροποίητη. Η ποιότητα ξεπερνά τις προσδοκίες.',
-    rating: 5,
-    item: 'Luxury Bag',
+    icon: Scissors,
+    title: 'Χειροποίητη διαδικασία',
+    text: 'Κάθε κοπή, ραφή και τελείωμα γίνεται στο χέρι, με έλεγχο λεπτομέρειας σε κάθε στάδιο.',
   },
   {
-    name: 'Ελένη Κ.',
-    location: 'Τρίκαλα',
-    text: 'Το αποτέλεσμα ήταν πέρα από κάθε προσδοκία. Ένα truly unique κομμάτι που κάνει κάθε outfit να ξεχωρίζει. Τέλεια εξυπηρέτηση και επικοινωνία.',
-    rating: 5,
-    item: 'Full Custom',
-  },
-  {
-    name: 'Δημήτρης Α.',
-    location: 'Λάρισα',
-    text: 'Παρήγγειλα custom sneakers με το δικό μου σχέδιο. Η διαδικασία ήταν ομαλή και το αποτέλεσμα τέλειο. Φοράω κάτι που δεν έχει κανείς άλλος.',
-    rating: 5,
-    item: 'Custom Sneakers',
+    icon: ShieldCheck,
+    title: 'Αντοχή',
+    text: 'Σχεδιάζουμε τις τσάντες ώστε να αντέχουν καθημερινή χρήση χωρίς να χάνουν την premium αισθητική τους.',
   },
 ];
 
 export default function Testimonials() {
   useReveal();
-  const [current, setCurrent] = useState(0);
-  const [animating, setAnimating] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      next();
-    }, 5500);
-    return () => clearInterval(interval);
-  });
-
-  const next = () => {
-    if (animating) return;
-    setAnimating(true);
-    setTimeout(() => {
-      setCurrent((c) => (c + 1) % testimonials.length);
-      setAnimating(false);
-    }, 300);
-  };
-
-  const prev = () => {
-    if (animating) return;
-    setAnimating(true);
-    setTimeout(() => {
-      setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
-      setAnimating(false);
-    }, 300);
-  };
-
-  const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="py-24 md:py-36 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="materials" className="py-24 md:py-36 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
           <div className="reveal mb-4">
-            <span className="section-tag">Κριτικές</span>
+            <span className="section-tag">Υλικά</span>
           </div>
           <h2
             className="reveal delay-100"
@@ -82,9 +39,9 @@ export default function Testimonials() {
               color: 'var(--color-text)',
             }}
           >
-            Αυτό λένε
+            Υλικά που
             <br />
-            <em style={{ fontStyle: 'italic' }} className="gold-gradient">οι πελάτες μας</em>
+            <em style={{ fontStyle: 'italic' }} className="gold-gradient">μιλούν από μόνα τους</em>
           </h2>
           <div className="gold-line-left reveal delay-200 mt-6 w-16" />
           <p
@@ -97,127 +54,61 @@ export default function Testimonials() {
               lineHeight: 1.8,
             }}
           >
-            Κάθε κριτική είναι μια ιστορία. Κάθε πελάτης είναι μέρος της οικογένειας HANDSTUFF.
+            Χτίζουμε κάθε τσάντα πάνω σε τρεις αρχές:
+            premium πρώτη ύλη, καθαρή χειροποίητη εκτέλεση, διαχρονική αντοχή.
           </p>
         </div>
 
-        <div className="reveal delay-200">
-          <div
-            style={{
-              background: 'var(--color-surface)',
-              border: '1px solid var(--color-border)',
-              padding: '40px',
-              transition: 'opacity 0.3s ease',
-              opacity: animating ? 0 : 1,
-            }}
-          >
-            <div className="flex items-center gap-1 mb-6">
-              {Array.from({ length: t.rating }).map((_, i) => (
-                <Star key={i} size={14} fill="var(--color-gold)" style={{ color: 'var(--color-gold)' }} />
-              ))}
-            </div>
-
-            <blockquote
-              style={{
-                fontFamily: 'var(--font-serif)',
-                fontSize: '22px',
-                fontWeight: 300,
-                fontStyle: 'italic',
-                color: 'var(--color-text)',
-                lineHeight: 1.6,
-                marginBottom: '28px',
-              }}
-            >
-              "{t.text}"
-            </blockquote>
-
-            <div className="flex items-center justify-between">
-              <div>
-                <div
+        <div className="reveal delay-200 grid grid-cols-1 gap-4">
+          {materialCards.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <article
+                key={item.title}
+                className={`card-hover reveal delay-${Math.min((i + 1) * 100, 400)}`}
+                style={{
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  padding: '28px',
+                }}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    style={{
+                      width: '36px',
+                      height: '36px',
+                      border: '1px solid rgba(201,168,76,0.35)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Icon size={16} style={{ color: 'var(--color-gold)' }} />
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: 'var(--font-serif)',
+                      fontSize: '28px',
+                      fontWeight: 400,
+                      color: 'var(--color-text)',
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+                <p
                   style={{
                     fontFamily: 'var(--font-sans)',
-                    fontSize: '13px',
-                    fontWeight: 500,
-                    color: 'var(--color-text)',
-                    letterSpacing: '0.05em',
+                    fontSize: '14px',
+                    color: 'rgba(240,236,228,0.6)',
+                    lineHeight: 1.75,
                   }}
                 >
-                  {t.name}
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '11px',
-                    color: 'rgba(240,236,228,0.4)',
-                    marginTop: '2px',
-                  }}
-                >
-                  {t.location} · {t.item}
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={prev}
-                  style={{
-                    background: 'none',
-                    border: '1px solid var(--color-border)',
-                    color: 'rgba(240,236,228,0.4)',
-                    padding: '8px',
-                    display: 'flex',
-                    transition: 'all 0.3s',
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-gold)';
-                    (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-gold)';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-border)';
-                    (e.currentTarget as HTMLButtonElement).style.color = 'rgba(240,236,228,0.4)';
-                  }}
-                >
-                  <ChevronLeft size={16} />
-                </button>
-                <button
-                  onClick={next}
-                  style={{
-                    background: 'none',
-                    border: '1px solid var(--color-border)',
-                    color: 'rgba(240,236,228,0.4)',
-                    padding: '8px',
-                    display: 'flex',
-                    transition: 'all 0.3s',
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-gold)';
-                    (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-gold)';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-border)';
-                    (e.currentTarget as HTMLButtonElement).style.color = 'rgba(240,236,228,0.4)';
-                  }}
-                >
-                  <ChevronRight size={16} />
-                </button>
-              </div>
-            </div>
-
-            <div className="flex gap-2 mt-6">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  style={{
-                    height: '2px',
-                    background: i === current ? 'var(--color-gold)' : 'var(--color-border)',
-                    flex: i === current ? 2 : 1,
-                    border: 'none',
-                    transition: 'all 0.4s ease',
-                  }}
-                />
-              ))}
-            </div>
-          </div>
+                  {item.text}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MessageCircle, ArrowUp } from 'lucide-react';
+import { Instagram, Facebook, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -35,7 +35,7 @@ export default function Footer() {
                   color: 'var(--color-gold)',
                 }}
               >
-                / DRSHOE
+                / HANDMADE BAGS
               </div>
             </div>
             <p
@@ -48,9 +48,8 @@ export default function Footer() {
                 maxWidth: '260px',
               }}
             >
-              Custom sneakers & handmade luxury bags.
-              Κάθε κομμάτι είναι μοναδικό.
-              Τρίκαλα, Ελλάδα.
+              Χειροποίητες δερμάτινες τσάντες σε περιορισμένα κομμάτια.
+              Ταυτότητα υψηλής χειροποίητης τέχνης από τα Τρίκαλα.
             </p>
           </div>
 
@@ -69,10 +68,11 @@ export default function Footer() {
             </div>
             <ul className="flex flex-col gap-3">
               {[
-                { label: 'Συλλογή', href: '#portfolio' },
-                { label: 'Υπηρεσίες', href: '#services' },
+                { label: 'Συλλογές', href: '#collections' },
+                { label: 'Υλικά', href: '#materials' },
                 { label: 'Η ιστορία μας', href: '#story' },
                 { label: 'Διαδικασία', href: '#process' },
+                { label: 'Εξατομικευμένη παραγγελία', href: '#custom-order' },
                 { label: 'Επικοινωνία', href: '#contact' },
               ].map((link) => (
                 <li key={link.href}>
@@ -134,7 +134,7 @@ export default function Footer() {
                 </span>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/drshoe.trikala/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group"
@@ -153,26 +153,6 @@ export default function Footer() {
                   Facebook
                 </span>
               </a>
-              <a
-                href="https://wa.me/306900000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 group"
-                style={{ textDecoration: 'none' }}
-              >
-                <MessageCircle size={16} style={{ color: 'var(--color-gold)' }} />
-                <span
-                  style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '13px',
-                    color: 'rgba(240,236,228,0.5)',
-                    transition: 'color 0.3s',
-                  }}
-                  className="group-hover:text-[var(--color-gold)]"
-                >
-                  WhatsApp
-                </span>
-              </a>
             </div>
           </div>
         </div>
@@ -188,7 +168,7 @@ export default function Footer() {
               letterSpacing: '0.05em',
             }}
           >
-            © {new Date().getFullYear()} HANDSTUFF / DRSHOE. Όλα τα δικαιώματα διατηρούνται.
+            © {new Date().getFullYear()} HANDSTUFF Χειροποίητες Τσάντες. Όλα τα δικαιώματα διατηρούνται.
           </p>
           <button
             onClick={scrollToTop}

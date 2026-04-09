@@ -2,24 +2,24 @@ import { useReveal } from '../hooks/useInView';
 import { Instagram } from 'lucide-react';
 
 const gridImages = [
-  'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-  'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-  'https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-  'https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-  'https://images.pexels.com/photos/1099816/pexels-photo-1099816.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-  'https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+  'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1614179689702-355944cd0918?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80',
 ];
 
 export default function InstagramSection() {
   useReveal();
 
   return (
-    <section className="py-24 md:py-36" style={{ background: 'var(--color-surface)' }}>
+    <section id="custom-order" className="py-24 md:py-36" style={{ background: 'var(--color-surface)' }}>
       <div className="gold-line" />
       <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto pt-16 md:pt-24">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="reveal mb-4">
-            <span className="section-tag">Instagram</span>
+            <span className="section-tag">Εξατομικευμένη παραγγελία</span>
           </div>
           <h2
             className="reveal delay-100"
@@ -31,10 +31,22 @@ export default function InstagramSection() {
               color: 'var(--color-text)',
             }}
           >
-            Μπες στον
+            Σχεδίασε τη
             <br />
-            <em style={{ fontStyle: 'italic' }} className="gold-gradient">κόσμο μας</em>
+            <em style={{ fontStyle: 'italic' }} className="gold-gradient">δική σου τσάντα</em>
           </h2>
+          <p
+            className="reveal delay-200 mt-6"
+            style={{
+              fontFamily: 'var(--font-sans)',
+              fontSize: '15px',
+              color: 'rgba(240,236,228,0.58)',
+              lineHeight: 1.8,
+            }}
+          >
+            Μοιράσου μαζί μας το ύφος, τις ανάγκες και τις λεπτομέρειες που θέλεις.
+            Δημιουργούμε ένα εξατομικευμένο σχέδιο και το μετατρέπουμε σε limited handmade κομμάτι.
+          </p>
         </div>
 
         <div className="reveal delay-200 grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3 mb-10">
@@ -49,7 +61,7 @@ export default function InstagramSection() {
             >
               <img
                 src={src}
-                alt={`Instagram post ${i + 1}`}
+                alt={`Custom bag ${i + 1}`}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -71,7 +83,7 @@ export default function InstagramSection() {
             className="btn-secondary inline-flex"
           >
             <Instagram size={14} />
-            <span>@handstuff__</span>
+            <span>Στείλε έμπνευση στο Instagram</span>
           </a>
         </div>
       </div>

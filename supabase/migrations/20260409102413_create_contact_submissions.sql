@@ -2,7 +2,7 @@
   # Create contact_submissions table
 
   ## Purpose
-  Stores contact form submissions from the HANDSTUFF / DRSHOE website.
+  Stores contact form submissions from the HANDSTUFF Handmade Bags website.
 
   ## New Tables
   - `contact_submissions`
@@ -10,7 +10,7 @@
     - `name` (text) - Submitter's full name
     - `email` (text) - Contact email
     - `phone` (text) - Optional phone number
-    - `service_type` (text) - Type of service requested (sneakers, bags, custom)
+    - `service_type` (text) - Type of bag category requested
     - `message` (text) - The inquiry message
     - `created_at` (timestamptz) - Submission timestamp
     - `status` (text) - Status of submission: pending/read/replied
